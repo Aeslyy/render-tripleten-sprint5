@@ -46,7 +46,8 @@ if start_button:
                      columns=['no', 'iterations', 'mean'])
         ],
         axis=0)
-    st.session_state['df_experiment_results'] = \
-        st.session_state['df_experiment_results'].reset_index(drop=True)
+
+    # Ajuste na linha que causava erro
+    st.session_state['df_experiment_results'] = st.session_state['df_experiment_results'].reset_index(drop=True)
 
 st.write(st.session_state['df_experiment_results'])
